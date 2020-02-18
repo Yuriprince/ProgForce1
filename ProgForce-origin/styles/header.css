@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'phone';
+	src: url('../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+}
+
+@font-face {
+	font-family: 'paragraph';
+	src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'numlinks';
+	src: url('../fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+h2, p,a,div {
+  font-family: 'paragraph';
+}
+
+body{ 
+  margin: 0;
+  padding: 0;
+}
+
+.set-paddings {
+  padding-left: 150px;
+  padding-right: 150px;
+
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+header .set-paddings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+#company-name {
+  justify-content: flex-start;
+}
+
+#phone {
+  justify-content: flex-end;
+}
+
+#company-name #text_company h2, p{
+  padding: 0;
+  margin: 5px;
+  width: 190px;
+}
+
+#company-name #text_company p{
+  font-size: 14px;
+  width: inherit;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#logo { 
+  /*float: left;*/
+  background-color: #464646;
+  height: 70px;
+  width: 70px;
+}
+
+#logo, #text {
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+#h2 {
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.phone_number {
+  font-size: 36px;
+  padding: 0px 0px 14px 0px;
+  width: inherit;
+  font-family: 'phone';
+}
+
+#callback {
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+  float: right;
+}
+
+a.dot {
+  text-decoration: none; /* Убираем подчеркивание */
+  border-bottom: 2px dashed; /* Добавляем свою линию */ 
+}
+
+#callback:hover,a:hover, a i:hover {
+  color: red;
+}
+
+#menu {
+  align-items: center;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  background-color: #464646;
+  color: white;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal li,div {
+  padding: 15px;
+  font-size: 22px;
+  list-style-type: none; /* Убираем маркеры */
+}
+
+.linkmenu {
+  color: white;
+  text-decoration: none;
+}

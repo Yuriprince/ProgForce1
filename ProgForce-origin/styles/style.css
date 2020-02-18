@@ -1,0 +1,512 @@
+@font-face {
+	font-family: 'phone';
+	src: url('../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf');
+}
+
+@font-face {
+	font-family: 'paragraph';
+	src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'numlinks';
+	src: url('../fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+.linkmenu {
+    color: white;
+    text-decoration: none;
+}
+
+#h2 {
+    font-size: 28px;
+}
+
+h2, p,a,div {
+    font-family: 'paragraph';
+}
+
+#callback {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    float: right;
+}
+
+body{ /*свойства отступов не наследуются*/
+    margin: 0;
+    padding: 0;
+}
+
+a.dot {
+    text-decoration: none; /* Убираем подчеркивание */
+    border-bottom: 2px dashed; /* Добавляем свою линию */ 
+}
+
+#callback:hover,a:hover, a i:hover {
+    color: red;
+}
+
+#logo { 
+    /*float: left;*/
+    background-color: #464646;
+    height: 70px;
+    width: 70px;
+}
+
+#logo, #text {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+#h2 {
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+/*задавать в процентах отступы - плохая идея. Лучше в пикселях*/
+
+.set-paddings {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+header .set-paddings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#company-name {
+    /*float: left;*/
+    justify-content: flex-start;
+    /*flex-grow: 1;
+    text-align: start;*/
+    /*width: 260px;*/
+}
+
+#phone {
+    /*float: right;*/
+    justify-content: flex-end;
+    /*min-width: 260px;*/
+}
+
+/*header .set-paddings {
+    margin-bottom: 50px;
+}*/
+
+#company-name img{
+    width: 40px;
+    height: 50px;
+}
+
+#company-name #text_company h2, p{
+    padding: 0;
+    margin: 5px;
+    width: 190px;
+}
+
+#company-name #text_company p{
+    font-size: 14px;
+    width: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.phone_number {
+    font-size: 36px;
+    padding: 0px 0px 14px 0px;
+    width: inherit;
+    font-family: 'phone';
+}
+
+
+
+#menu {
+    align-items: center;
+    padding: 0;
+    padding-top: 50px;
+}
+
+#main-body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    background-color: #464646;
+    color: white;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal li,div {
+    padding: 15px;
+    font-size: 22px;
+    list-style-type: none; /* Убираем маркеры */
+}
+
+.roating-banner{
+    margin: 0 auto;
+    height: 400px;
+    background-color: yellow;
+    overflow: hidden;
+    position: relative;
+}
+
+#new-flex {
+    padding: 0;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.category {
+    list-style-type: none;
+    font-size: 14px;
+    /*letter-spacing: 1px;*/
+    letter-spacing: 0px;
+    color: #464646;
+}
+
+.cards .category {
+    color: black;
+}
+
+#nav {
+    width: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    color: #464646;
+}
+
+.lined {
+    text-decoration: underline;
+}
+#main-cat {
+    list-style-type: square;
+}
+#main-cat li {
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 10px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    list-style-position: inside;
+}
+
+#selected1 {
+    color: black;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+#content-products {
+    margin: 0;
+    padding: 0px 10px 0px 0px;
+    min-width: 220px;
+}
+
+.product-card {
+    margin: 5px;
+    background-color: #a0a0a0;
+    width: 200px;
+    min-height: 325px;
+    margin: 7px;
+}
+
+.tovar-desc {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.price {
+    margin-top: 50px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.product-card img {
+    width: 200px;
+    height: 200px;
+}
+
+#numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#numbers a {
+    text-decoration: none;
+    padding-right: 5px;
+    font-family: 'paragraph';
+    color: black;
+}
+
+hr {
+    padding-bottom: 1px;
+    background-color: #9b9b9b;
+    border-bottom:1px solid #F4F4F4;
+}
+
+
+#description,#company-name,#phone,#numbers,
+#main-body,.roating-banner, #text,#text_company, #h2,
+#card-container {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*div {
+    margin: 0;
+    padding: 0;
+}*/
+
+#numbers {
+    padding-top: 20px;
+}
+
+#description {
+    padding-top: 35px;
+}
+
+
+#abzatsy {
+    display: flex;
+    /*justify-content: center;*/
+    flex-wrap: wrap;
+}
+#text1 {
+    justify-content: flex-start;
+    padding-right: 20px;
+    /*flex-grow: 1;*/
+}
+
+#text2 {
+    justify-content: flex-end;
+    padding-left: 20px;
+}
+
+.richtext {
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+main a {
+    padding-left: 5px;
+    color: black;
+}
+
+main .set-paddings {
+    width: inherit;
+}
+
+footer a, footer p {
+    color: #ccc;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+
+/*#footer-column div{
+    padding-left: 50px;
+    padding-right: 50px;
+}*/
+
+/*.trademark {
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+.development {
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+.links {
+    padding-left: 50px;
+    padding-right: 50px;
+}*/
+
+#footer-column {
+    display: flex;
+}
+
+.trademark {
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.trademark p {
+    width: inherit;
+}
+
+.links {
+    justify-content: center;
+    flex-grow: 3;
+}
+
+.development {
+    justify-content: flex-end;
+}
+
+
+#footer-column.set-paddings {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+footer {
+	width: 100%;
+	background: #464646;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-top: 200px;
+}
+
+
+footer p, .ul-foot {
+	color: #ccc;
+}
+
+footer div,ul {
+    margin: 0;
+    padding: 0;
+}
+
+p,a {
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    color: white;
+    float: right;
+}
+
+@media all and (max-width: 990px) {
+    .horizontal {
+        flex-direction: column;
+    }
+    .slash {
+        display: none;
+    }
+}
+
+@media all and (max-width: 740px) {
+    #new-flex {
+        flex-direction: column;
+    }
+
+    #content-products {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 904px) {
+
+    .set-paddings {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    #company-name {
+        justify-content: flex-start;
+    }
+    
+    #phone {
+        justify-content: flex-end;
+    }
+}
+
+@media all and (min-width: 905px) {
+
+    #company-name {
+        flex-grow: 1;
+
+    }
+
+    .links {
+        flex-grow: 1;
+    }
+}
+
+@media all and (max-width: 669px) {
+
+    .set-paddings {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media all and (max-width: 865px) {
+
+    #phone {
+        margin-top: 15px;
+    }
+}
+
+@media all and (min-width: 1370px) {
+    .set-paddings {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+@media all and (max-width: 1000px) {
+    #footer-column, #abzatsy {
+        flex-direction: column;
+    }
+
+    #abzatsy {
+        justify-content: center;
+    }
+
+    #text1, #text2 {
+        padding: 0;
+        width: inherit;
+    }
+
+    #text2 {
+        padding-top: 20px;
+    }
+
+    #footer-column div {
+        padding: 20px;
+    }
+}
+

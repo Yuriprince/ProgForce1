@@ -1,0 +1,165 @@
+#main-body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.category {
+  list-style-type: none;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #464646;
+}
+
+.cards .category {
+  color: black;
+}
+
+#nav {
+  width: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  color: #464646;
+}
+
+#new-flex {
+  padding: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#content-products {
+  margin: 0;
+  padding: 0px 10px 0px 0px;
+  min-width: 220px;
+}
+
+.lined {
+  text-decoration: underline;
+}
+
+#main-cat {
+  list-style-type: square;
+}
+#main-cat li {
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 10px;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  list-style-position: inside;
+}
+
+#selected1 {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+#content-products {
+  margin: 0;
+  padding: 0px 10px 0px 0px;
+  min-width: 220px;
+}
+
+.product-card {
+  margin: 5px;
+  background-color: #a0a0a0;
+  width: 200px;
+  min-height: 325px;
+  margin: 7px;
+}
+
+.tovar-desc {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.price {
+  margin-top: 50px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+}
+
+#numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+#numbers a {
+  text-decoration: none;
+  padding-right: 5px;
+  font-family: 'paragraph';
+  color: black;
+}
+
+hr {
+  padding-bottom: 1px;
+  background-color: #9b9b9b;
+  border-bottom:1px solid #F4F4F4;
+}
+
+
+#description,#company-name,#phone,#numbers,
+#main-body,.roating-banner, #text,#text_company, #h2,
+#card-container {
+  margin: 0;
+  padding: 0;
+}
+
+#numbers {
+  padding-top: 20px;
+}
+
+#description {
+  padding-top: 35px;
+}
+
+
+#abzatsy {
+  display: flex;
+  flex-wrap: wrap;
+}
+#text1 {
+  justify-content: flex-start;
+  padding-right: 20px;
+}
+
+#text2 {
+  justify-content: flex-end;
+  padding-left: 20px;
+}
+
+.richtext {
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+main a {
+  padding-left: 5px;
+  color: black;
+}
+
+main .set-paddings {
+  width: inherit;
+}

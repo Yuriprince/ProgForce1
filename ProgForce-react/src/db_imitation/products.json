@@ -1,0 +1,39 @@
+{
+"products": [
+  {"id" : 1, "category":"Чайники", "price" : 1990, "decription" : "Чайник Bosch 2,0L", "img" : "nofoto.jpg"},
+  {"id" : 2, "category":"Недвижимость", "price" : 1990, "decription" : "2-комнатная квартира в центре", "img" : "nofoto.jpg"},
+  {"id" : 3, "category":"Холодильники", "price" : 1990, "decription" : "Мощный холодильник Liebherr", "img" : "nofoto.jpg"},
+  {"id" : 4, "category":"Чайники", "price" : 1990, "decription" : "'Электрочайник Maxxxwell 1,5л", "img" : "nofoto.jpg"},
+  {"id" : 5, "category":"Недвижимость", "price" : 1990, "decription" : "3-комнатная квартира в Ростове", "img" : "nofoto.jpg"},
+  {"id" : 6, "category":"Чайники", "price" : 1990, "decription" : "Чайник Bosch 2,0L", "img" : "nofoto.jpg"},
+  {"id" : 7, "category":"Чайники", "price" : 1990, "decription" : "Электрочайник Braun 1,8л", "img" : "nofoto.jpg"},
+  {"id" : 8, "category":"Недвижимость", "price" : 1990, "decription" : "1-комнатная кватира в Москве", "img" : "nofoto.jpg"},
+  {"id" : 9, "category":"Чайники", "price" : 1990, "decription" : "Чайник Scarlett 3,2л", "img" : "nofoto.jpg"},
+  {"id" : 10, "category":"Холодильники", "price" : 1990, "decription" : "52л Beko", "img" : "nofoto.jpg"},
+
+  {"id" : 11, "category":"Чайники", "price" : 1990, "decription" : "Braun L2-506", "img" : "nofoto.jpg"},
+  {"id" : 12, "category":"Чайники", "price" : 1990, "decription" : "Rowenta X-series", "img" : "nofoto.jpg"},
+  {"id" : 13, "category":"Чайники", "price" : 1990, "decription" : "Барьер 2л", "img" : "nofoto.jpg"},
+  {"id" : 14,"category":"Одежда", "price" : 1990, "decription" : "Cotton сорочка", "img" : "nofoto.jpg"},
+  {"id" : 15,"category":"Одежда", "price" : 1990, "decription" : "Свитшот Cropp", "img" : "nofoto.jpg"},
+  {"id" : 16,"category":"Одежда", "price" : 1990, "decription" : "Майка Adidas", "img" : "nofoto.jpg"},
+  {"id" : 17,"category":"Посудомойки", "price" : 1990, "decription" : "Indesit (Польша)", "img" : "nofoto.jpg"},
+  {"id" : 18,"category":"Холодильники", "price" : 1990, "decription" : "Холодильник Визирь", "img" : "nofoto.jpg"},
+  {"id" : 19,"category":"Посудомойки", "price" : 1990, "decription" : "Ariston A2", "img" : "nofoto.jpg"},
+  {"id" : 20,"category":"Микроволновки", "price" : 1990, "decription" : "Supra D500W", "img" : "nofoto.jpg"},
+
+  {"id" : 21,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 22,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 23,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 24,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 25,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 26,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 27,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 28,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 29,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+  {"id" : 30,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"},
+
+  {"id" : 31,"price" : 1990, "decription" : "Самый чёткий товар", "img" : "nofoto.jpg"}
+
+]
+}
