@@ -4,7 +4,7 @@ import Products from'../../../db_imitation/products.json';
 import {Link} from 'react-router-dom';
 import ParagraphAboutCompany from './paragraphs';
 import tovar from '../../../assets/img/nofoto2.jpg'
-import Spin from '../../menupage';
+import Spin from '../components/spinner';
 
 const checkCategory = (cat,item,data_sampling) => {
   if(cat === 'Быт')
@@ -75,7 +75,7 @@ const ContainerWithCards = (props) => {
   const [isload, setLoad] = useState(true);
 
   setTimeout(()=>{setLoad(false);}, 500);
-  
+
   return (
     <CardContainer img={tovar}>
 
@@ -86,30 +86,34 @@ const ContainerWithCards = (props) => {
               onClick={(event) => {
                 event.preventDefault();
                 setPage(p-1);
-                setLoad(true);
+                //setLoad(true);
               }}>{p}
             </a>
-          )) 
+          ))
         }
       </div> 
-      {isload === true ? <Spin/> :
-      <div className="cards" id="cards">
-        {
-          getPagingProducts(currentpage, props.category).length > 0 ?
 
-          getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
-            <div className="product-card category" key={p.id}>
-              <div className="tovar"></div>
-              <p className="tovar-desc">{p.decription} id: {p.id}</p>
-              <p className="price">{p.price} p.<Link to={`/${p.id}`}>
-              <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
-              </Link></p>
-            </div>
-          )) :
-          <div>Товары отсутствуют по данной категории</div>
+      <div>
+        {isload ? <Spin/> :
+        <div className="cards" id="cards">
+          {
+            getPagingProducts(currentpage, props.category).length > 0 ?
+
+            getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
+              <div className="product-card category" key={p.id}>
+                <div className="tovar"></div>
+                <p className="tovar-desc">{p.decription} id: {p.id}</p>
+                <p className="price">{p.price} p.<Link to={`/${p.id}`}>
+                <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </Link></p>
+              </div>
+            )) :
+            <div>Товары отсутствуют по данной категории</div>
+          }
+        </div>
         }
       </div>
-      }
+
 
       <div id="description">
         <hr/>

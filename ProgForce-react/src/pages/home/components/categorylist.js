@@ -1,7 +1,6 @@
-import React,{useState, For} from "react";
+import React from "react";
 import paragraph from '../../../assets/fonts/Open_Sans/OpenSans-Regular.ttf';
 import styled from 'styled-components';
-import MenuPage from '../../menupage';
 import {NavLink} from 'react-router-dom';
 
 const categories = {
@@ -52,20 +51,7 @@ const ListOfCategory = (props) => {
     </CategoryList>
   );
 }
-/* className={p.id === 1 && props.match.path === '/' ? "linkmenu lined" : "linkmenu"}
-<NavLink to={p.link} className="linkmenu"
-            activeClassName="lined">{p.name} 
-            {p.id === 2 ?
-              <ul id="main-cat">
-                {
-                  p.appliances.map(el => (
-                    <li key={el.id}><NavLink to={el.link} className="linkmenu" 
-                      activeClassName="lined">{el.name}</NavLink></li>
-                  ))
-                }
-              </ul> : <span></span>
-            } </NavLink>
- */
+
 export default ListOfCategory;
 
 const CategoryList = styled.div`

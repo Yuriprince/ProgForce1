@@ -55,19 +55,19 @@ const Property = function() {
 
 //subcatalog
 const MicroWaves = function() {
-  return (<Home currentcategory="Микроволновки"/>);
+  return (<Home ishome={true} currentcategory="Микроволновки"/>);
 }
 
 const Freezers = function() {
-  return (<Home currentcategory="Холодильники"/>);
+  return (<Home ishome={true} currentcategory="Холодильники"/>);
 }
 
 const Washes = function() {
-  return (<Home currentcategory="Посудомойки"/>);
+  return (<Home ishome={true} currentcategory="Посудомойки"/>);
 }
 
 const Boilers = function() {
-  return (<Home currentcategory="Чайники"/>);
+  return (<Home ishome={true} currentcategory="Чайники"/>);
 }
 
 const Product = (props) => {

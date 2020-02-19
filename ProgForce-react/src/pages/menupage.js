@@ -1,24 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {Container} from "./container";
-import { ClipLoader } from "react-spinners";
-import { css } from '@emotion/core';
-
-const center = css`
-  display: block;
-  margin: 0 auto;
-  margin-top: 100px;
-`;
-
-export const Spin = () => {
-  return(
-    <ClipLoader
-      css={center}
-      size={100}
-      color={"#123abc"}
-    />
-  );
-}
-
+import Spin from './home/components/spinner';
 const MenuPage = (props) => {
 
   const [isload, setLoad] = useState(true);
