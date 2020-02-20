@@ -41,7 +41,7 @@ const ListOfCategory = (props) => {
                   }
                   </ul> : 
                 <NavLink to={p.link} 
-                className={p.id === 1 && props.location.pathname === '/' ? "linkmenu lined" : "linkmenu"}
+                className={p.id === 1 && props.location === '/' ? "linkmenu lined" : "linkmenu"}
                 activeClassName="lined">{p.name}</NavLink>
               }
           </li>

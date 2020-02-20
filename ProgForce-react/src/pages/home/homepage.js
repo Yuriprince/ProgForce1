@@ -6,6 +6,22 @@ import {Container} from "../container";
 import ListOfCategory from './components/categorylist';
 import ContainerWithCards from './components/cardcontainer';
 import Banner from './components/banner';
+import { BreadCrumbs } from "./components/breadcrunbs";
+
+
+let callForwarding = new Map();
+callForwarding.set('/', 'Автомобили');
+callForwarding.set('/catalog/autos', 'Автомобили');
+callForwarding.set('/catalog/clothes', 'Одежда');
+callForwarding.set('/catalog/mobiletech', 'Мобильная техника');
+callForwarding.set('/catalog/computers', 'Компьютеры');
+callForwarding.set('/catalog/property', 'Недвижимость');
+
+callForwarding.set('/catalog/appliances/microwaves', 'Микроволновки');
+callForwarding.set('/catalog/appliances/freezers', 'Холодильники');
+callForwarding.set('/catalog/appliances/washes', 'Посудомойки');
+callForwarding.set('/catalog/appliances/boilers', 'Чайники');
+
 
 export const Home = (props) => {
   return(
@@ -13,16 +29,12 @@ export const Home = (props) => {
       <Banner/>
 
       <Container>
-        <p className="category" id="nav"><a href="">Главная</a> 
-          /  <a href="">Каталог</a>  / 
-          {props.ishome !== undefined ? 
-          " Бытовая техника / " + props.currentcategory : 
-          props.currentcategory}</p>
+        <BreadCrumbs currentcategory={props.currentcategory}/>
           
         <div id="new-flex">     
-          <ListOfCategory location={props.currentloc !== undefined ? props.currentloc : ""}/>
+          <ListOfCategory location={props.location !== undefined ? props.location : ""}/>
 
-          <ContainerWithCards category={props.currentcategory}/>
+          <ContainerWithCards category={callForwarding.get(props.location)}/>
         </div>
         
       </Container>

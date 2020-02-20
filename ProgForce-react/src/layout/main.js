@@ -7,7 +7,7 @@ import {Container} from "../pages/container";
 
 
 const HomePage = function(props) {
-  return (<Home currentcategory="Автомобили" currentloc={props.location}/>);
+  return (<Home location={props.location.pathname}/>);
 }
 
 const Catalog = function() {
@@ -26,48 +26,9 @@ const Contacts = function() {
   return (<MenuPage text="Контакты"/>);
 }
 
-
-//catalog
-const Autos = function() {
-  return (<Home currentcategory="Автомобили"/>);
-}
-
-const Appliances = function() {
-  return (<Home currentcategory="Быт"/>);
-}
-
-const Mobiletech = function() {
-  return (<Home currentcategory="Мобильная техника"/>);
-}
-
-const Computers = function() {
-  return (<Home currentcategory="Компьютеры"/>);
-}
-
-const Clothes = function() {
-  return (<Home currentcategory="Одежда"/>);
-}
-
-const Property = function() {
-  return (<Home currentcategory="Недвижимость"/>);
-}
-
-
 //subcatalog
-const MicroWaves = function() {
-  return (<Home ishome={true} currentcategory="Микроволновки"/>);
-}
-
-const Freezers = function() {
-  return (<Home ishome={true} currentcategory="Холодильники"/>);
-}
-
-const Washes = function() {
-  return (<Home ishome={true} currentcategory="Посудомойки"/>);
-}
-
-const Boilers = function() {
-  return (<Home ishome={true} currentcategory="Чайники"/>);
+const Categories = function(props) {
+  return (<Home location={props.location.pathname}/>);
 }
 
 const Product = (props) => {
@@ -91,22 +52,9 @@ const Main = () => {
         <Route path='/contacts' component={Contacts}/>
 
 
-
-        <Route path='/catalog/autos' component={Autos}/>
-
-        <Route path='/catalog/appliances/microwaves' component={MicroWaves}/>
-        <Route path='/catalog/appliances/freezers' component={Freezers}/>
-        <Route path='/catalog/appliances/washes' component={Washes}/>
-        <Route path='/catalog/appliances/boilers' component={Boilers}/>
-
-        <Route path='/catalog/appliances' component={Appliances}/>
-
-        <Route path='/catalog/mobiletech' component={Mobiletech}/>
-        <Route path='/catalog/computers' component={Computers}/>
-        <Route path='/catalog/clothes' component={Clothes}/>
-        <Route path='/catalog/property' component={Property}/>
-
+        <Route path='/catalog/:id' component={Categories}/>
         <Route path='/catalog' component={Catalog}/>
+
         <Route path="/:number" component={Product}/>
 
       </Switch>
