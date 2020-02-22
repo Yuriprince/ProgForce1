@@ -8,7 +8,9 @@ const center = css`
   margin-top: 100px;
 `;
 
-const Spin = () => {
+const Spin = (props) => {
+
+  setTimeout(()=>{props.setLoad(false);}, 500);
   return(
     <ClipLoader
       css={center}

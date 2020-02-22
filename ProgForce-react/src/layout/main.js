@@ -6,9 +6,9 @@ import {Route, Switch} from 'react-router-dom';
 import {Container} from "../pages/container";
 
 
-const HomePage = function(props) {
+/*const HomePage = function(props) {
   return (<Home location={props.location.pathname}/>);
-}
+}*/
 
 const Catalog = function() {
   return (<MenuPage text="Каталог товаров"/>);
@@ -46,7 +46,7 @@ const Main = () => {
   return (
     <main>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Categories} />
         <Route path='/delivery' component={Delivery}/>
         <Route path='/pricelist' component={PriceList}/>
         <Route path='/contacts' component={Contacts}/>
@@ -62,5 +62,5 @@ const Main = () => {
   )
 }
 
-
+//
 export default Main;

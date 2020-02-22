@@ -69,48 +69,9 @@ const getPagingProducts = (koef, cat) => {
   return prodarray.products;
 }
 
-const LoadingData = (props) => {
-  const [isload, setLoad] = useState(true);
-  const [currentpage, setPage] = useState(0);
-
-  setTimeout(()=>{setLoad(false);}, 500);
-
-  if(isload) {
-    return (
-      <Spin/>
-    );
-  }
-  else {
-    return (
-      <div className="cards" id="cards">
-        { 
-          getPagingProducts(currentpage, props.category).length > 0 ?
-
-          getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
-            <div className="product-card category" key={p.id}>
-              <div className="tovar"></div>
-              <p className="tovar-desc">{p.decription} id: {p.id}</p>
-              <p className="price">{p.price} p.<Link to={`/${p.id}`}>
-              <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
-              </Link></p>
-            </div>
-          )) :
-          <div>Товары отсутствуют по данной категории</div>
-        }
-      </div>
-    );
-  }
-
-}
-
-
-
 const ContainerWithCards = (props) => {
 
   const [currentpage, setPage] = useState(0);
-  //const [isload, setLoad] = useState(true);
-
-  //setTimeout(()=>{setLoad(false);}, 500);
 
   return (
     <CardContainer img={tovar}>
@@ -129,10 +90,24 @@ const ContainerWithCards = (props) => {
         }
       </div> 
 
-      <div>
-        <LoadingData category={props.category}/>
-      </div>
+      { props.isload ? <Spin setLoad={props.setLoad}/> :
+      <div className="cards" id="cards">
+        { 
+          getPagingProducts(currentpage, props.category).length > 0 ?
 
+          getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
+            <div className="product-card category" key={p.id}>
+              <div className="tovar"></div>
+              <p className="tovar-desc">{p.decription} id: {p.id}</p>
+              <p className="price">{p.price} p.<Link to={`/${p.id}`}>
+              <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </Link></p>
+            </div>
+          )) :
+          <div>Товары отсутствуют по данной категории</div>
+        }
+      </div>
+      }
 
       <div id="description">
         <hr/>

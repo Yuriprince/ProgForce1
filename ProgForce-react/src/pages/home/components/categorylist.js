@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState, useEffect}  from "react";
 import paragraph from '../../../assets/fonts/Open_Sans/OpenSans-Regular.ttf';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
+import ContainerWithCards from '../components/cardcontainer';
+import { BreadCrumbs } from "./breadcrunbs";
 
 const categories = {
   value : [{id : 1, name : 'Автомобили', link: '/catalog/autos'},
@@ -24,35 +26,68 @@ const categories = {
 }
 
 const ListOfCategory = (props) => {
+  const [currentcategory, setCategory] = useState("Автомобили");
+  const [isload, setLoad] = useState(true);
+
   return(
-    <CategoryList>
-      <ul className="category">
-      {
+    <div>
+
+    <BreadCrumbs currentcategory={currentcategory} 
+                 ishome={props.location.includes("appliances") === true ? true : false}/>
+
+    <NewFlex>
+      <CategoryList>
+      <ul className="category"> {
         categories.value.map(p => (
           <li key={p.id}>
-              {p.id === 2 ? 
-                  <ul id="main-cat">
-                  <p className="linkmenu">{p.name}</p>
-                  {
-                    p.appliances.map(el => (
-                      <li key={el.id}><NavLink to={el.link} className="linkmenu"
-                        activeClassName="lined">{el.name}</NavLink></li>
-                    ))
-                  }
-                  </ul> : 
-                <NavLink to={p.link} 
+            {p.id === 2 ? 
+              <ul id="main-cat">
+                <p className="linkmenu">{p.name}</p> {
+                  p.appliances.map(el => (
+                    <li key={el.id}><NavLink to={el.link} className="linkmenu"
+                      activeClassName="lined" 
+                      onClick={()=>{
+                        setCategory(el.name)
+                        setLoad(true)
+                      }}>{el.name}</NavLink></li>
+                  ))
+                }
+              </ul> : 
+              <NavLink to={p.link} 
                 className={p.id === 1 && props.location === '/' ? "linkmenu lined" : "linkmenu"}
-                activeClassName="lined">{p.name}</NavLink>
-              }
+                activeClassName="lined" 
+                onClick={()=>{
+                  setCategory(p.name)
+                  setLoad(true)
+                }}>{p.name}
+              </NavLink>
+            }
           </li>
         ))
       }
       </ul>
-    </CategoryList>
+      </CategoryList>
+
+      <ContainerWithCards category={currentcategory} isload={isload} setLoad={setLoad}/>
+      
+    </NewFlex>
+    </div>
   );
 }
 
 export default ListOfCategory;
+
+const NewFlex = styled.div`
+  padding: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 740px) {
+    flex-direction: column;
+  }
+`;
+
 
 const CategoryList = styled.div`
   margin: 0;

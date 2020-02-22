@@ -1,5 +1,5 @@
 //standart components
-import React from "react";
+import React, {useState} from "react";
 
 //connecting styles
 import {Container} from "../container";
@@ -8,7 +8,7 @@ import ContainerWithCards from './components/cardcontainer';
 import Banner from './components/banner';
 import { BreadCrumbs } from "./components/breadcrunbs";
 
-
+/*
 let callForwarding = new Map();
 callForwarding.set('/', 'Автомобили');
 callForwarding.set('/catalog/autos', 'Автомобили');
@@ -21,20 +21,16 @@ callForwarding.set('/catalog/appliances/microwaves', 'Микроволновки
 callForwarding.set('/catalog/appliances/freezers', 'Холодильники');
 callForwarding.set('/catalog/appliances/washes', 'Посудомойки');
 callForwarding.set('/catalog/appliances/boilers', 'Чайники');
-
+*/
 
 export const Home = (props) => {
   return(
     <div id="main-body">
       <Banner/>
 
-      <Container>
-        <BreadCrumbs currentcategory={props.currentcategory}/>
-          
+      <Container>     
         <div id="new-flex">     
           <ListOfCategory location={props.location !== undefined ? props.location : ""}/>
-
-          <ContainerWithCards category={callForwarding.get(props.location)}/>
         </div>
         
       </Container>
@@ -44,3 +40,4 @@ export const Home = (props) => {
 }
 //<ContainerWithCards category={props.currentcategory}/>
 
+//<ContainerWithCards category={callForwarding.get(props.location)}/>
