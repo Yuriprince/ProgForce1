@@ -5,11 +5,6 @@ import {Home} from '../pages/home/homepage';
 import {Route, Switch} from 'react-router-dom';
 import {Container} from "../pages/container";
 
-
-/*const HomePage = function(props) {
-  return (<Home location={props.location.pathname}/>);
-}*/
-
 const Catalog = function() {
   return (<MenuPage text="Каталог товаров"/>);
 }
@@ -62,5 +57,5 @@ const Main = () => {
   )
 }
 
-//
+
 export default Main;

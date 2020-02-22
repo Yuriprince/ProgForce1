@@ -90,24 +90,24 @@ const ContainerWithCards = (props) => {
         }
       </div> 
 
-      { props.isload ? <Spin setLoad={props.setLoad}/> :
-      <div className="cards" id="cards">
-        { 
-          getPagingProducts(currentpage, props.category).length > 0 ?
+      {props.isload ? <Spin setLoad={props.setLoad}/> : 
+        <div className="cards" id="cards"> { 
+            getPagingProducts(currentpage, props.category).length > 0 ?
 
-          getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
-            <div className="product-card category" key={p.id}>
-              <div className="tovar"></div>
-              <p className="tovar-desc">{p.decription} id: {p.id}</p>
-              <p className="price">{p.price} p.<Link to={`/${p.id}`}>
-              <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
-              </Link></p>
-            </div>
-          )) :
-          <div>Товары отсутствуют по данной категории</div>
-        }
-      </div>
+            getPagingProducts(currentpage, props.category).map(p => ( /*убрать all() */
+              <div className="product-card category" key={p.id}>
+                <div className="tovar"></div>
+                <p className="tovar-desc">{p.decription} id: {p.id}</p>
+                <p className="price">{p.price} p.<Link to={`/${p.id}`}>
+                <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                </Link></p>
+              </div>
+            )) :
+            <div>Товары отсутствуют по данной категории</div>
+          }
+        </div>
       }
+
 
       <div id="description">
         <hr/>

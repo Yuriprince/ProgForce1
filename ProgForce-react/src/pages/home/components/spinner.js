@@ -9,7 +9,6 @@ const center = css`
 `;
 
 const Spin = (props) => {
-
   setTimeout(()=>{props.setLoad(false);}, 500);
   return(
     <ClipLoader
